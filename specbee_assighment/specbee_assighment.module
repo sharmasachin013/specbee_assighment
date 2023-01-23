@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains specbee_assighment.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function specbee_assighment_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the specbee_assighment module.
+    case 'help.page.specbee_assighment':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Drupal Developer Assignment for Specbee') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function specbee_assighment_theme() {
+  return [
+    'specbee_assighment_result' => [
+      'variables' => [
+        'content' => '',
+        'city' => '',
+        'country' => '',
+        'timezone' => '',
+        'time' => '',
+        'day' => '',
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

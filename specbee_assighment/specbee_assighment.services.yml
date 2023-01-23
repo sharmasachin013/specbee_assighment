@@ -1,0 +1,7 @@
+services:
+  logger.channel.specbee_assighment:
+    parent: logger.channel_base
+    arguments: ['specbee_assighment']
+  specbee.assignment:
+    class: Drupal\specbee_assighment\SpecbeeAssignment
+    arguments: ['@config.factory']

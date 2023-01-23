@@ -1,0 +1,9 @@
+specbee_assighment.specbee_admin_form:
+  path: '/admin/config/specbee_assighment/specbeeadmin'
+  defaults:
+    _form: '\Drupal\specbee_assighment\Form\SpecbeeAdminForm'
+    _title: 'SpecbeeAdminForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
